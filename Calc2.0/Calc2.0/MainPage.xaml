@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Calc2._0.MainPage">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style x:Key="OPButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#fe9f06"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+            <Style x:Key="NumButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#333333"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+            <Style x:Key="TopButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#a5a5a5"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+            <Style x:Key="Functions" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#212121"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="MarkerFelt-Thin"/>
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="FontSize" Value="20"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </Page.Resources>
+
+    
+    <StackLayout BackgroundColor="Black">
+        <Grid Padding="0,40,0,0" HeightRequest="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.ColumnSpan="10" x:Name="cEntry" Text="{Binding CurrentEntry}" VerticalOptions="Center" HorizontalTextAlignment="End" FontSize="52" TextColor="White"></Label>
+
+            <Button Grid.Row="4" Grid.Column="6"  Text="1" Command="{Binding NumericCommand}" CommandParameter="1" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="3" Grid.Column="6"  Text="4" Command="{Binding NumericCommand}" CommandParameter="4" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="2" Grid.Column="6"  Text="7" Command="{Binding NumericCommand}" CommandParameter="7" Style="{StaticResource NumButtons}"/>
+
+            <Button Grid.Row="4" Grid.Column="7"  Text="2" Command="{Binding NumericCommand}" CommandParameter="2" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="3" Grid.Column="7"  Text="5" Command="{Binding NumericCommand}" CommandParameter="5" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="2" Grid.Column="7"  Text="8" Command="{Binding NumericCommand}" CommandParameter="8" Style="{StaticResource NumButtons}"/>
+
+            <Button Grid.Row="4" Grid.Column="8"  Text="3" Command="{Binding NumericCommand}" CommandParameter="3" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="3" Grid.Column="8"  Text="6" Command="{Binding NumericCommand}" CommandParameter="6" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="2" Grid.Column="8"  Text="9" Command="{Binding NumericCommand}" CommandParameter="9" Style="{StaticResource NumButtons}"/>
+            <Button Grid.Row="5" Grid.Column="8"  Text="." Command="{Binding DecimalPointCommand}" Style="{StaticResource NumButtons}"/>
+
+
+            <Button Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="2" Text="0" Command="{Binding NumericCommand}" CommandParameter="0" Style="{StaticResource NumButtons}"/>
+
+            <Button Grid.Row="1" Grid.Column="9" Text="÷" Command="{Binding DivCommand}" Style="{StaticResource OPButtons}"/>
+            <Button Grid.Row="2" Grid.Column="9" Text="×" Command="{Binding MulCommand}" Style="{StaticResource OPButtons}"/>
+            <Button Grid.Row="3" Grid.Column="9" Text="-" Command="{Binding SubCommand}" Style="{StaticResource OPButtons}"/>
+            <Button Grid.Row="4" Grid.Column="9" Text="+" Command="{Binding AddCommand}" Style="{StaticResource OPButtons}"/>
+            <Button Grid.Row="5" Grid.Column="9" Text="=" Command="{Binding SumCommand}" Style="{StaticResource OPButtons}"/>
+
+            <Button Grid.Row="1" Grid.Column="6" Text="AC" Command="{Binding ClearCommand}" Style="{StaticResource TopButtons}"></Button>
+            <Button Grid.Row="1" Grid.Column="7" Text="±" Command="{Binding PlusMinusCommand}" Style="{StaticResource TopButtons}"/>
+            <Button Grid.Row="1" Grid.Column="8" Text="%" Style="{StaticResource TopButtons}"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="(" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="2ⁿᵈ" BorderColor="{Binding SecondLabel}" Command="{Binding secondCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="0" Text="⅟x" Command="{Binding OneOverCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="x!" Command="{Binding FactCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="0" Text="Deg" Style="{StaticResource Functions}"/>
+
+            <Button Grid.Row="1" Grid.Column="1" Text=")" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="x²" Command="{Binding SqrCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="²√x" Command="{Binding SqrtCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="sin" Command="{Binding sinCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="sinh" Style="{StaticResource Functions}"/>
+
+            <Button Grid.Row="1" Grid.Column="2" Text="mc" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="x³" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="∛x" Command="{Binding cubertCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="cos" Command="{Binding cosCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="2" Text="cosh" Style="{StaticResource Functions}"/>
+
+            <Button Grid.Row="1" Grid.Column="3" Text="m+" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="xʸ" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="ʸ√x" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="tan" Command="{Binding tanCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="3" Text="tanh" Style="{StaticResource Functions}"/>
+
+            <Button Grid.Row="1" Grid.Column="4" Text="m-" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="4" Text="eˣ" Command="{Binding exCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="4" Text="ln" Command="{Binding lnCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="4" Text="e" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="4" Text="π" Style="{StaticResource Functions}"/>
+
+            <Button Grid.Row="1" Grid.Column="5" Text="mr" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="2" Grid.Column="5" Text="{Binding Second}" Command="{Binding tenxCommand}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="3" Grid.Column="5" Text="log10" Command="{Binding log10Command}" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="4" Grid.Column="5" Text="EE" Style="{StaticResource Functions}"/>
+            <Button Grid.Row="5" Grid.Column="5" Text="Rand" Command="{Binding randCommand}" Style="{StaticResource Functions}"/>
+
+
+
+
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

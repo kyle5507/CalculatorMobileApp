@@ -1,0 +1,1 @@
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0.UWP\Calc2.0.UWP.csproj;x86

@@ -1,0 +1,12 @@
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\bin\Debug\netstandard2.0\Calc2.0.deps.json
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\bin\Debug\netstandard2.0\Calc2.0.dll
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\bin\Debug\netstandard2.0\ref\Calc2.0.dll
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\bin\Debug\netstandard2.0\Calc2.0.pdb
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\Calc2.0.AssemblyInfoInputs.cache
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\Calc2.0.AssemblyInfo.cs
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\Calc2.0.dll
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\ref\Calc2.0.dll
+C:\Users\Kyle\source\repos\Calc2.0\Calc2.0\obj\Debug\netstandard2.0\Calc2.0.pdb
